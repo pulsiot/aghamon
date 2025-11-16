@@ -46,7 +46,7 @@ A modern web dashboard for monitoring AdGuard Home DNS statistics, built with Go
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/debuggerboy/aghamon.git
+   git clone https://github.com/pulsiot/aghamon.git
    cd aghamon
    ```
 
