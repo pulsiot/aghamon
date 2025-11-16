@@ -1,0 +1,10 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="header-section">
+    <h1>DNS Clients</h1>
+    <p>Total clients: {{.TotalClients}}</p>
+</div>
+
+{{.ClientsTable}}
+{{end}}

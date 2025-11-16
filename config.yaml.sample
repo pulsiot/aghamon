@@ -1,0 +1,8 @@
+# AdGuard Home Configuration
+adguard:
+  # Replace with your AdGuard Home server URL
+  server_url: "https://my.adguard.url.com"
+  # Replace with your AdGuard Home username
+  username: "myusername@mydomain.com"
+  # Replace with your AdGuard Home password
+  password: "my_adguard_password"

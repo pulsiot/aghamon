@@ -1,0 +1,18 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="header-section">
+    <h1>DNS Statistics</h1>
+</div>
+
+<div class="summary">
+    <p><strong>Time Period:</strong> Last 24 {{.TimeUnits}}</p>
+    <p><strong>Total DNS Queries:</strong> {{.NumDNSQueries}}</p>
+    <p><strong>Total Blocked Queries:</strong> {{.NumBlockedFiltering}}</p>
+    <p><strong>Average Processing Time:</strong> {{.AvgProcessingTime}} seconds</p>
+</div>
+
+{{.TopDomainsTable}}
+{{.TopClientsTable}}
+{{.TopBlockedTable}}
+{{end}}
