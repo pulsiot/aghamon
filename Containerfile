@@ -5,7 +5,7 @@ ENV GITHUB_ORG=pulsiot \
 
 WORKDIR $GOPATH/src/${GITHUB_ORG}/${GITHUB_REPO}/
 COPY . .
-RUN go mod tidy
+RUN ls -la && go mod tidy
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o ${GITHUB_REPO}
 RUN config.yaml.sample config.yaml
 FROM scratch
