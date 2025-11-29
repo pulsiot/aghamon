@@ -13,6 +13,8 @@ import (
   
   "github.com/labstack/echo/v4"
   "gopkg.in/yaml.v3"
+  _ "golang.org/x/crypto/x509roots/fallback"
+  _ "time/tzdata"
 )
 
 //go:embed templates/*.html
