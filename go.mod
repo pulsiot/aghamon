@@ -4,7 +4,6 @@ go 1.24.3
 
 require (
 	github.com/labstack/echo/v4 v4.13.4
-	golang.org/x/crypto/x509roots/fallback v0.0.0-20251112184832-bcf6a849efcf
 	gopkg.in/yaml.v3 v3.0.1
 )
 

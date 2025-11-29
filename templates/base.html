@@ -45,6 +45,7 @@
             margin-right: 20px; 
             padding: 5px 10px;
             border-radius: 3px;
+            font-size: 14px;
         }
         .nav a:hover { 
             background-color: #3498db;
@@ -62,21 +63,32 @@
             padding: 20px; 
             border-radius: 5px; 
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            min-height: 400px; /* Ensure minimum content height */
+            min-height: 400px;
+            overflow-x: auto; /* Enable horizontal scrolling for tables */
+        }
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
         }
         table { 
             width: 100%; 
             border-collapse: collapse; 
-            margin-top: 20px;
+            margin: 0;
+            min-width: 600px; /* Ensure table has minimum width */
         }
         table th, table td { 
             padding: 12px 8px; 
             text-align: left; 
             border-bottom: 1px solid #ddd;
+            white-space: nowrap;
         }
         table th { 
             background-color: #f8f9fa; 
             font-weight: bold;
+            position: sticky;
+            left: 0;
         }
         table tr:hover { 
             background-color: #f8f9fa;
@@ -103,12 +115,108 @@
             margin-bottom: 10px;
             color: #2c3e50;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px 15px;
+            }
+            .header img {
+                height: 30px;
+            }
+            .header h1 {
+                font-size: 18px;
+            }
+            .nav {
+                padding: 8px 15px;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            .nav a {
+                margin-right: 15px;
+                padding: 4px 8px;
+                font-size: 13px;
+            }
+            .container {
+                padding: 0 10px;
+                margin: 10px auto;
+            }
+            .content {
+                padding: 15px;
+                min-height: 300px;
+            }
+            table th, table td {
+                padding: 8px 6px;
+                font-size: 13px;
+            }
+            .table-container {
+                margin: 15px 0;
+                border-radius: 3px;
+            }
+            table {
+                min-width: 800px; /* Wider minimum for complex tables */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 8px 10px;
+            }
+            .header img {
+                height: 25px;
+                margin-right: 10px;
+            }
+            .header h1 {
+                font-size: 16px;
+            }
+            .nav {
+                padding: 6px 10px;
+            }
+            .nav a {
+                margin-right: 10px;
+                padding: 3px 6px;
+                font-size: 12px;
+            }
+            .container {
+                padding: 0 5px;
+            }
+            .content {
+                padding: 10px;
+                border-radius: 3px;
+            }
+            table th, table td {
+                padding: 6px 4px;
+                font-size: 12px;
+            }
+            .summary {
+                padding: 10px;
+                margin-bottom: 15px;
+            }
+        }
+
+        /* Enhanced table styling for better mobile experience */
+        .mobile-table-info {
+            background-color: #e8f4fd;
+            padding: 10px;
+            border-radius: 3px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #2c3e50;
+            text-align: center;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-table-info {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="/static/logo_small.png" alt="DNS Monitor Logo">
-        <h1>DNS Monitor</h1>
+        <img src="/static/logo_small.png" alt="Aghamon Logo">
+        <h1>Aghamon</h1>
     </div>
     
     <div class="nav">
@@ -125,7 +233,7 @@
     </div>
     
     <div class="footer">
-        <p>&copy; 2025 DNS Monitor. Made with ❤️ using Go</p>
+        <p>&copy; 2025 Aghamon. Made with ❤️ using Go</p>
     </div>
 </body>
 </html>
